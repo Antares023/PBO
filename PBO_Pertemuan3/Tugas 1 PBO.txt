@@ -1,0 +1,12 @@
+1. Jelaskan apa itu pemrograman python
+2. Jelaskan sejarah singkat python
+3. Bagaimana proses instalasi python 
+4. Bagaimana cara memastikan keberhasilan instalasi python
+5. Jelaskan Tipe Data yang ada di Python
+6. Jelaskan tentang variabel di python dan berikan contohnya
+7. Jelaskan Operator yang ada di python dan berikan contohnya
+8. Jelaskan tentang IF (kondisi) dalam pemrograman python serta berikan 
+   contohnya
+9. Jelaskan tentang Pengulangan (Loop) serta berikan contohnya
+10. Jelaskan tentang List, Tuple, Set, dan Dictionary serta berikan contohnya
+Jawaban ditulis tangan dengan jelas (dapat dibaca orang lain) di atas kertas folio bergaris, dikumpulkan paling lambat hari sabtu tanggal 28 oktober 2023 jam 12.00 siang.
