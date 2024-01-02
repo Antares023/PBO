@@ -1,0 +1,127 @@
+Microsoft Windows [Version 10.0.19045.3693]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\WINDOWS\system32>cd\
+
+C:\>c
+'c' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\>cd\
+
+C:\>c\
+'c\' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\>cd\
+
+C:\>c:
+
+C:\>cd xampp
+
+C:\xampp>cd bin
+The system cannot find the path specified.
+
+C:\xampp>cd mysql
+
+C:\xampp\mysql>cd bin
+
+C:\xampp\mysql\bin>mysql -u root -p
+Enter password:
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 183
+Server version: 10.4.27-MariaDB mariadb.org binary distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> create database obat;
+Query OK, 1 row affected (0.001 sec)
+
+MariaDB [(none)]> use obat;
+Database changed
+MariaDB [obat]> creat tabel dataobat(
+    -> id int primary key auto_increment,
+    -> kdobat varchar(10) unique,
+    -> nama varchar(100),
+    -> berat varchar(10),
+    -> bentuk varchar(50));
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'creat tabel dataobat(
+id int primary key auto_increment,
+kdobat varchar(10) u...' at line 1
+MariaDB [obat]> create table dataobat(
+    -> id int primary key auto_increment,
+    -> kdobat varchar(10) unique,
+    -> nama varchar(100),
+    -> berat varchar(10),
+    -> bentuk varchar(50));
+Query OK, 0 rows affected (0.025 sec)
+
+MariaDB [obat]> show tables;
++----------------+
+| Tables_in_obat |
++----------------+
+| dataobat       |
++----------------+
+1 row in set (0.001 sec)
+
+MariaDB [obat]> insert into dataobat(kdobat,nama,berat,bentuk)values('765','promagh','20mg','tablet');
+Query OK, 1 row affected (0.003 sec)
+
+MariaDB [obat]> insert into dataobat(kdobat,nama,berat,bentuk)values('434','paracetamol','32mg','tablet');
+Query OK, 1 row affected (0.002 sec)
+
+MariaDB [obat]> insert into dataobat(kdobat,nama,berat,bentuk)values('823','kontreksin','12mg','kapsul');
+Query OK, 1 row affected (0.002 sec)
+
+MariaDB [obat]> insert into dataobat(kdobat,nama,berat,bentuk)values('909','procold','15mg','tablet');
+Query OK, 1 row affected (0.002 sec)
+
+MariaDB [obat]> insert into dataobat(kdobat,nama,berat,bentuk)values('777','bodrex','10mg','kapsul');
+Query OK, 1 row affected (0.001 sec)
+
+MariaDB [obat]> select*from dataobat;
++----+--------+-------------+-------+--------+
+| id | kdobat | nama        | berat | bentuk |
++----+--------+-------------+-------+--------+
+|  1 | 765    | promagh     | 20mg  | tablet |
+|  2 | 434    | paracetamol | 32mg  | tablet |
+|  3 | 823    | kontreksin  | 12mg  | kapsul |
+|  4 | 909    | procold     | 15mg  | tablet |
+|  5 | 777    | bodrex      | 10mg  | kapsul |
++----+--------+-------------+-------+--------+
+5 rows in set (0.000 sec)
+
+MariaDB [obat]> update dataobat set nama='antimo'where id='3';
+Query OK, 1 row affected (0.002 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+MariaDB [obat]> select*from dataobat
+    -> ;
++----+--------+-------------+-------+--------+
+| id | kdobat | nama        | berat | bentuk |
++----+--------+-------------+-------+--------+
+|  1 | 765    | promagh     | 20mg  | tablet |
+|  2 | 434    | paracetamol | 32mg  | tablet |
+|  3 | 823    | antimo      | 12mg  | kapsul |
+|  4 | 909    | procold     | 15mg  | tablet |
+|  5 | 777    | bodrex      | 10mg  | kapsul |
++----+--------+-------------+-------+--------+
+5 rows in set (0.000 sec)
+
+MariaDB [obat]> delete from dataobat where id='3';
+Query OK, 1 row affected (0.002 sec)
+
+MariaDB [obat]> select*from dataobat;
++----+--------+-------------+-------+--------+
+| id | kdobat | nama        | berat | bentuk |
++----+--------+-------------+-------+--------+
+|  1 | 765    | promagh     | 20mg  | tablet |
+|  2 | 434    | paracetamol | 32mg  | tablet |
+|  4 | 909    | procold     | 15mg  | tablet |
+|  5 | 777    | bodrex      | 10mg  | kapsul |
++----+--------+-------------+-------+--------+
+4 rows in set (0.000 sec)
+
+MariaDB [obat]>
